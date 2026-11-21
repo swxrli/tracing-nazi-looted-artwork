@@ -1,0 +1,107 @@
+{
+    "artworks_rows": 41343,
+    "statements_rows": 150168,
+    "artwork_ids_without_statements": 488,
+    "index_statistics": {
+        "artwork_hash_entries": 41343,
+        "statement_hash_entries": 150168,
+        "artwork_statement_links": 150168,
+        "unique_locations": 1688,
+        "unique_artists": 16898,
+        "unique_owners": 623,
+        "unique_statement_types": 4,
+        "unique_sources": 1,
+        "complete_dates": 30512,
+        "partial_dates": 21840,
+        "invalid_dates": 11,
+        "unclassified_dates": 4,
+        "missing_dates": 97801,
+        "orphan_statements": 0
+    },
+    "graph_nodes": 193823,
+    "graph_edges": 429511,
+    "graph_node_types": {
+        "artwork": 41343,
+        "recorded_owner": 623,
+        "statement": 150168,
+        "location": 1688,
+        "documentary_source": 1
+    },
+    "graph_edge_types": {
+        "owner_recorded_on_artwork": 31374,
+        "has_statement": 150168,
+        "records_location": 97801,
+        "documented_by": 150168
+    },
+    "date_completeness_categories": {
+        "Complete dates only": 12498,
+        "No date statements": 10711,
+        "Partial dates only": 10520,
+        "Complete dates with other date issues": 7123,
+        "No provenance statements": 488,
+        "Invalid or unclassified dates": 3
+    },
+    "top_15_locations": [
+        [
+            "Jeu de Paume",
+            25458
+        ],
+        [
+            "Lager Peter",
+            4952
+        ],
+        [
+            "Nikolsburg",
+            4833
+        ],
+        [
+            "Cannes/Ruoms, France",
+            4270
+        ],
+        [
+            "Louvre",
+            2657
+        ],
+        [
+            "Buxheim",
+            2524
+        ],
+        [
+            "Fussen",
+            2084
+        ],
+        [
+            "German Embassy, Paris",
+            1931
+        ],
+        [
+            "Neuschwanstein",
+            1627
+        ],
+        [
+            "rue des Bucherons, Saint-Germain-en-Laye",
+            1543
+        ],
+        [
+            "Dienststelle Westen",
+            1473
+        ],
+        [
+            "Kasteel Nyenrode, Breukelen, The Netherlands",
+            1247
+        ],
+        [
+            "H.W. Lange, Berlin",
+            1219
+        ],
+        [
+            "Alois Miedl",
+            1206
+        ],
+        [
+            "Kogl",
+            1144
+        ]
+    ],
+    "interpretation_note": "Recorded associations are not proof of ownership, transfer, or physical presence."
+}

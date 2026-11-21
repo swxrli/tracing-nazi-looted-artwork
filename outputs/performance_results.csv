@@ -1,0 +1,11 @@
+Experiment,Execution time (ms),Peak memory (MB)
+Index construction,5779.228700004751,
+Linear artwork search,6.626899994444102,
+Hash artwork search,0.000100000761449337,
+Linear date search,10.20680001238361,
+Binary date search,0.21860000560991466,
+Graph construction,2401.956699992297,
+BFS traversal,163.09560000081547,
+DFS traversal,176.47870001383126,
+Index memory measurement,,135.20739459991455
+Graph memory measurement,,264.38521671295166
