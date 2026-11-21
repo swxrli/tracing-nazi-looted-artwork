@@ -1,34 +1,49 @@
-# Tracing Nazi-Looted Art: Computational Reconstruction of Fragmented Provenance Networks
+# Tracing Nazi-Looted Art
+### Computational Reconstruction of Fragmented Provenance Networks
 
-## Mini Project – Second Year
+A data-driven project exploring the provenance of artworks recorded by the **ERR (Einsatzstab Reichsleiter Rosenberg)** during World War II.
 
-This project focuses on reconstructing the provenance (ownership history) of artworks that were looted during the Nazi era. It uses computational methods to organise fragmented historical records, identify missing information, and visualise connections between artworks, owners, locations, and historical events.
+This project combines data processing, data structures, algorithms, object-oriented programming, and data visualization to reconstruct fragmented artwork ownership histories and identify gaps in provenance records.
 
-## Project Objectives
+---
 
-- Organise fragmented provenance records.
-- Search and retrieve artwork and ownership information efficiently.
-- Represent relationships between artworks, owners, locations, and records.
-- Identify gaps and missing dates in provenance histories.
-- Visualise provenance data through charts, dashboards, and maps.
+## Project Overview
 
-## Project Components
+During World War II, the Nazi organization ERR systematically confiscated artworks across occupied Europe. Historical records documenting these artworks and their ownership are often fragmented, incomplete, or inconsistent.
 
-### 1. Data Structures
+This project analyzes records from the ERR Jeu de Paume database to organize artwork information, reconstruct provenance relationships, and identify missing or incomplete historical documentation.
 
-The Data Structures component uses:
+## Objectives
 
-- **Hash Tables** – for quick searching of artworks and provenance statements.
-- **Inverted Indexes** – to search records using attributes such as artists, owners, and locations.
-- **Graphs** – to represent relationships between artworks, owners, statements, and locations.
-- **Graph Traversal Algorithms** – BFS and DFS to explore provenance connections.
-- **Date Indexing** – to organise and search records based on dates.
+- Collect and organize historical artwork records.
+- Clean and preprocess raw provenance data.
+- Apply data structures and algorithms to organize and analyze relationships.
+- Implement object-oriented concepts using C++.
+- Identify gaps and inconsistencies in provenance timelines.
+- Visualize findings through Tableau dashboards.
 
-### 2. Object-Oriented Programming (C++)
+## Key Components
 
-The OOPS component is implemented in C++.
+### 1. Data Collection and Preprocessing
 
-It uses classes such as:
+- Collects artwork records from the ERR Jeu de Paume database.
+- Processes raw JSON records into structured CSV datasets.
+- Standardizes artwork and provenance statement identifiers.
+- Classifies dates based on completeness and validity.
+- Preserves source information for further analysis.
+
+### 2. Data Structures and Algorithms
+
+- **Hash Tables:** Efficient data retrieval.
+- **Inverted Indexes:** Searching and indexing textual information.
+- **Graphs:** Representing relationships between artworks and locations.
+- **BFS and DFS:** Graph traversal and relationship exploration.
+- **Date Indexing:** Organizing provenance information chronologically.
+- **Performance Benchmarking:** Evaluating implemented operations.
+
+### 3. Object-Oriented Programming (C++)
+
+Implements classes to represent:
 
 - `Artwork`
 - `ProvenanceStatement`
@@ -37,40 +52,161 @@ It uses classes such as:
 - `GeneralStatement`
 - `ProvenanceRecord`
 
-The project demonstrates inheritance, encapsulation, abstraction, and polymorphism through the modelling of artworks and their provenance statements.
+Demonstrates encapsulation, inheritance, abstraction, and runtime polymorphism.
 
-### 3. Data Visualization
+### 4. Data Visualization
 
-The Data Visualization component is created using Tableau.
+Tableau dashboards and stories present insights into:
 
-It includes charts, dashboards, and a story to explore:
+- Artwork provenance patterns.
+- Geographic distribution of recorded locations.
+- Chronological patterns in ownership histories.
+- Completeness of provenance dates.
+- Gaps in historical documentation.
 
-- Artwork and provenance records
-- Ownership and location patterns
-- Historical timelines
-- Provenance gaps and missing dates
-- Relationships within the dataset
+## Technology Stack
 
-## Technologies Used
-
-- C++
-- Python
-- Tableau
-- CSV and JSON datasets
-- Data Structures and Algorithms
+| Area | Technologies |
+|---|---|
+| Programming Languages | Python, C++ |
+| Data Processing | Pandas, Python Standard Library |
+| Data Structures | Hash Tables, Inverted Indexes, Graphs |
+| Algorithms | BFS, DFS, Searching and Indexing |
+| Data Visualization | Tableau |
+| C++ Compiler | GCC (g++) |
+| Data Formats | JSON, CSV |
 
 ## Dataset
 
-The project uses artwork and provenance records related to the European art market and Nazi-era looted art.
+The project uses historical records from the **ERR Jeu de Paume database**.
 
-The dataset contains approximately:
+The processed dataset contains approximately:
 
-- **41,343 artworks**
+- **41,343 artwork records**
 - **150,168 provenance statements**
 
-## Project Outcome
+The data is organized into raw and processed formats to support preprocessing and subsequent analysis.
 
-The project demonstrates how programming, data structures, object-oriented modelling, and data visualization can be combined to analyse fragmented historical provenance records and support the study of artwork ownership history.
+Historical records may contain incomplete dates, missing ownership information, and inconsistent descriptions. These limitations are considered during analysis.
 
-## Author
-Swarali Tambe
+## Repository Structure
+
+```text
+tracing-nazi-looted-artwork/
+│
+├── data structures/
+│   ├── algorithms.py
+│   ├── analysis.py
+│   ├── benchmark.py
+│   ├── data_index.py
+│   ├── graph.py
+│   ├── main.py
+│   └── test_project.py
+│
+├── data viz/
+│   ├── data viz mini project.twb
+│   └── data viz mini project.twbx
+│
+├── oops/
+│   ├── main.cpp
+│   ├── models.cpp
+│   └── models.h
+│
+├── shared data/
+│   ├── data/
+│   │   ├── raw/
+│   │   └── processed/
+│   └── python/
+│       ├── collect_err.py
+│       └── prepare_data.py
+│
+├── outputs/
+├── .gitignore
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3
+- GCC or another compatible C++ compiler
+- Tableau Desktop or Tableau Public
+
+### Python Setup
+
+Install the data-processing dependency:
+
+```bash
+python -m pip install pandas
+```
+
+The optional web data collection script additionally requires:
+
+```bash
+python -m pip install requests beautifulsoup4 urllib3 truststore
+```
+
+These additional packages are only required if you intend to run the web data collection script.
+
+### C++ Compilation and Execution
+
+The project uses GCC (`g++`) to compile the C++ source files.
+
+From the repository root directory, run:
+
+```powershell
+g++ -std=c++17 "oops/main.cpp" "oops/models.cpp" -o provenance.exe
+```
+
+Execute the program:
+
+```powershell
+.\provenance.exe
+```
+
+**Important:** Run the executable from the repository root directory so it can locate the processed CSV datasets.
+
+### Python Data Preprocessing
+
+The preprocessing script converts the raw JSON dataset into structured CSV files.
+
+Run it from the repository root:
+
+```bash
+python "shared data/python/prepare_data.py"
+```
+
+## Project Outputs
+
+The `outputs/` directory contains generated analytical results, including:
+
+- Artwork provenance summaries.
+- Chronological provenance records.
+- Connected artwork records.
+- Date completeness analysis.
+- Location frequency analysis.
+- Performance benchmarking results.
+- Provenance gap analysis.
+
+## Limitations
+
+- Historical records may be incomplete or inconsistent.
+- Some artwork ownership timelines cannot be fully reconstructed.
+- Automated analysis is limited by the information available in the source records.
+- Identified provenance connections reflect relationships documented in the available records and do not independently establish legal ownership.
+
+## Future Improvements
+
+- Improve search efficiency and indexing.
+- Develop more detailed provenance network visualizations.
+- Enhance handling of incomplete and uncertain historical dates.
+- Expand analytical capabilities for identifying provenance gaps.
+
+## Academic Project
+
+**Project Title:** Tracing Nazi-Looted Art: Computational Reconstruction of Fragmented Provenance Networks
+
+**Author:** Swarali Tambe
+
+An academic mini-project integrating data structures, algorithms, object-oriented programming, data processing, and data visualization.
