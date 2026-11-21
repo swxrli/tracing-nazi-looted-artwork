@@ -1,0 +1,27 @@
+﻿# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Compiled files
+*.exe
+
+# Tableau temporary files
+*.twbr
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.log
+
+# Data collection checkpoint
+shared data/data/raw/err_records_checkpoint.jsonl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Operating system
+.DS_Store
+Thumbs.db
